@@ -501,4 +501,77 @@ img {
 .home__categories__wrapper .categories__item span {
   color: #2b2b2b;
   font-size: 2rem;
+}
+
+.home__trend__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.home__trend__wrapper .home__trend__title h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.home__trend__wrapper .home__trend__divider span {
+  display: flex;
+  height: 0.3rem;
+  width: 8rem;
+  background-color: #2b2b2b;
+  border-radius: 3rem;
+}
+.home__trend__wrapper .home__trend__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item {
+  display: flex;
+  justify-content: unset;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: 0.5s ease;
+  border-bottom: 2px solid #e62c2c;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item:hover {
+  transform: scale(1.02);
+}
+.home__trend__wrapper .home__trend__items .home__trend__item:hover span {
+  color: #ffffff;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item:hover .home__trend__item__desc::before {
+  width: 100%;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item img {
+  width: 30rem;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item .home__trend__item__desc {
+  display: flex;
+  justify-content: unset;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item .home__trend__item__desc::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #e62c2c;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item .home__trend__item__desc span {
+  transition: 0.5s ease;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item .home__trend__item__desc span.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 0 0 1.5rem;
+}
+.home__trend__wrapper .home__trend__items .home__trend__item .home__trend__item__desc span.price {
+  padding: 0 0 1rem 1.5rem;
 }/*# sourceMappingURL=main.css.map */
