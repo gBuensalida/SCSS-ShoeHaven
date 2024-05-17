@@ -1,0 +1,10 @@
+@mixin flexBox($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin mediaQuery($width: $breakpoint-sm) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
