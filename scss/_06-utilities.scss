@@ -1,0 +1,18 @@
+@keyframes sliding {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(100%);
+    }
+    
+    50.01% {
+        transform: translate(-100%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+
+}
