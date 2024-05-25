@@ -1,0 +1,106 @@
+.footer {
+    &__wrapper {
+        @include flexBox(unset, center);
+        flex-direction: column;
+        .footer__links {
+            @include flexBox(unset, center);
+            flex-direction: column;
+            gap: 3rem;
+            padding: 3rem 0;
+            .footer__link {
+                @include flexBox(center);
+                flex-direction: column;
+                gap: 1rem;
+                h3 {
+                    font-weight: 600;
+                    letter-spacing: .5rem;
+                }
+                span {
+                    display: flex;
+                    height: 0.2rem;
+                    width: 5rem;
+                    border-radius: 2rem;
+                    background-color: $clr-dark;
+                }
+                ul {
+                    @include flexBox(center);
+                    flex-direction: column;
+                    li {
+                        transition: 0.3s ease;
+                        &:hover {
+                            transform: scale(1.03);
+                            a {
+                                color: $clr-red;
+                                text-decoration: underline;
+                            }
+                        }
+                        a {
+                            color: gray;
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__bottom {
+            width: 100%;
+            @include flexBox(center, center);
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 0rem 0;
+            border-top: 1px solid lightgray;
+            img {
+                width: 7rem;
+                opacity: 70%;
+            }
+            span {
+                color: rgba(0, 0, 0, 0.485);
+            }
+        }
+    }
+    // DESKTOP RESOLUTION
+    @include mediaQuery {
+        &__wrapper {
+            .footer__links {
+                @include flexBox(flex-start, flex-start);
+                flex-direction: unset;
+                width: 100%;
+                gap: 18%;
+                .footer__link {
+                    @include flexBox(center, flex-start);
+                    gap: 1rem;
+                    h3 {
+                        font-size: 2rem;
+                    }
+                    span {
+                        height: 0.2rem;
+                        width: 7.5rem;
+                    }
+                    ul {
+                        @include flexBox(center, flex-start);
+                        flex-direction: column;
+                        li {
+                            padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+            .footer__bottom {
+                width: 100%;
+                @include flexBox(space-between, center);
+                flex-direction: unset;
+                gap: 1rem;
+                padding: 2rem 0rem 0;
+                border-top: 1px solid lightgray;
+                img {
+                    width: 7rem;
+                    opacity: 70%;
+                    order: -1;
+                }
+                span {
+                    color: rgba(0, 0, 0, 0.485);
+                }
+            }
+        }
+    }
+}
