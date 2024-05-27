@@ -63,9 +63,6 @@
                     a {
                         color: $clr-dark;
                         @include flexBox;
-                        i {
-                            transform: rotate(180deg);
-                        }
                     }
                 }
             }
@@ -93,10 +90,10 @@
                 .header__login__window {
                     position: absolute;
                     left: 10%;
-                    top: 25vh;
+                    top: 20vh;
                     background: $clr-light;
                     width: 80%;
-                    height: 50%;
+                    height: 60%;
                     @include flexBox(flex-start, flex-start);
                     flex-direction: column;
                     visibility: hidden;
@@ -135,6 +132,12 @@
                             border: 1px solid lightgray;
                             outline: none;
                             width: 100%;
+                        }
+                        input.login {
+                            background: $clr-red;
+                            color: $clr-light;
+                            font-size: 1.7rem;
+                            font-weight: 600;
                         }
                     }
                     span {
